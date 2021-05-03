@@ -1,6 +1,9 @@
 import React from 'react'
-import logo from '../my_unsplash_logo.svg'
 import styled from 'styled-components'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+
+import logo from '../my_unsplash_logo.svg'
 import { Button } from './Button.style'
 
 const Header = ({ addPhotoHandle, onChangeFilterHandler }) => {
@@ -22,19 +25,22 @@ const Header = ({ addPhotoHandle, onChangeFilterHandler }) => {
         </div>
         <div className='search-bar'>
           <form>
-            <div className='input-control'>
+            <div className='input-control search'>
               <input
                 type='text'
                 className='form-input'
                 placeholder='Search by name'
                 onChange={onChangeHandler}
               />
+              <FontAwesomeIcon className='search-glass' icon={faSearch} />
             </div>
           </form>
         </div>
       </div>
       <div className='right'>
-        <Button onClick={addPhotoHandle}>Add a Photo</Button>
+        <Button onClick={addPhotoHandle} type='button'>
+          Add a Photo
+        </Button>
       </div>
     </NavContainer>
   )
@@ -45,12 +51,6 @@ const NavContainer = styled.section`
   justify-content: space-between;
   align-items: center;
   margin-top: 32px;
-
-  /* @media (max-width: 768px) {
-    display: column;
-    columns: 2;
-    gap: 1em;
-  } */
 
   @media (max-width: 650px) {
     flex-direction: column;
@@ -67,20 +67,19 @@ const NavContainer = styled.section`
     margin-left: 15px;
   }
 
-  /* .search-bar input {
-    width: 100%;
-    padding: 1rem 1rem 1rem 2rem;
-    font-family: Noto Sans;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 0.84rem;
-    line-height: 19px;
-    color: #bdbdbd;
-    border: 1px solid #bdbdbd;
-    box-sizing: border-box;
-    filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.1));
-    border-radius: 6px;
-  } */
+  .search {
+    position: relative;
+  }
+
+  .search input {
+    padding-left: 40px;
+  }
+  .search-glass {
+    position: absolute;
+    left: 15px;
+    top: 19px;
+  }
+
   .left {
     display: flex;
     justify-content: space-between;

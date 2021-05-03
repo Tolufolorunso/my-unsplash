@@ -24,7 +24,7 @@ const DeletePhoto = ({ cancelHandler, deleteImageHandler, loading }) => {
         </div>
 
         <div className='modalBtns'>
-          <Button cancel onClick={cancelHandler}>
+          <Button cancel onClick={cancelHandler} type='button'>
             Cancel
           </Button>
 

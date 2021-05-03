@@ -11,7 +11,6 @@ const Gallery = ({ images, deleteHandler }) => {
           <GalleryItem
             image={image}
             key={image._id}
-            index={index}
             deleteHandler={deleteHandler}
           />
         )

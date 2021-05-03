@@ -38,7 +38,7 @@ const AddPhoto = ({
           />
         </div>
         <div className='modalBtns'>
-          <Button cancel onClick={cancelHandler}>
+          <Button cancel onClick={cancelHandler} type='button'>
             Cancel
           </Button>
 

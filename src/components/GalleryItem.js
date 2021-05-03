@@ -2,9 +2,9 @@ import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { swing } from 'react-animations'
 
-const GalleryItem = ({ image, deleteHandler, index }) => {
+const GalleryItem = ({ image, deleteHandler }) => {
   return (
-    <Item className='img' index={index}>
+    <Item className='img'>
       <img src={image.photoUrl} alt='' />
       <button
         className='button btn-para'

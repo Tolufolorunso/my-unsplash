@@ -12,8 +12,12 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
-      Solution
+    <a href="https://https://github.com/Tolufolorunso/my-unsplash">
+      Solution (frondEnd)
+    </a>
+    <span> | </span>
+    <a href="https://https://github.com/Tolufolorunso/my-unsplash">
+      Backend Solution
     </a>
     <span> | </span>
     <a href="https://devchallenges.io/challenges/rYyhwJAxMfES5jNQ9YsP">
@@ -72,7 +76,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/your-user-name/your-project-name
+$ git clone https://github.com/Tolufolorunso/my-unsplash.git
 
 # Install dependencies
 $ npm install
@@ -91,6 +95,6 @@ $ npm start
 
 ## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username})
+- Website [Tolulope](https://tolufolorunso.herokuapp.com/)
+- GitHub [@Tolufolorunso](https://github.com/Tolufolorunso)
+- Twitter [@developer_tolu](https://twitter.com/developer_tolu)

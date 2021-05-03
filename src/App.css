@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+h1,
+h2,
+h3 {
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+    font-size: 24px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-page {
+    width: 90%;
+    margin: 0 auto;
+    height: 300px;
+    position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.form-control {
+    margin-bottom: 1.4rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.form-input {
+    width: 100%;
+    padding: 1rem;
+    font-family: Noto Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 19px;
+    color: #bdbdbd;
+    border: 1px solid #bdbdbd;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.1));
+    border-radius: 6px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-control label {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 19px;
+    color: #4f4f4f;
 }

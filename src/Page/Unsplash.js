@@ -11,6 +11,8 @@ import {
 
 import { customError } from '../utils/customError.js'
 
+
+
 // import imagesArr from '../data'
 
 const Unsplash = () => {
@@ -20,6 +22,7 @@ const Unsplash = () => {
   const [images, setImages] = useState([])
   const [loading, setLoading] = useState(true)
   const [photoID, setPhotoID] = useState('')
+  const [url, setPhotoID] = useState('')
 
   const cancelHandler = () => {
     setLabel('')
@@ -35,10 +38,13 @@ const Unsplash = () => {
       return
     }
     try {
-      const response = await axios.post('http://localhost:8080/api/v1/image', {
-        label,
-        photoUrl,
-      })
+      const response = await axios.post(
+        'https://unsplash-be.herokuapp.com/api/v1/image',
+        {
+          label,
+          photoUrl
+        }
+      )
       setLoading(false)
       images.unshift(response.data.data)
       setImages(images)
@@ -72,7 +78,9 @@ const Unsplash = () => {
   // Get all photos from the NodeJs server
   const getPhotos = async () => {
     try {
-      const photos = await axios.get('http://localhost:8080/api/v1/image')
+      const photos = await axios.get(
+        'https://unsplash-be.herokuapp.com/api/v1/image'
+      )
       setImages(photos.data.data)
       // setImages(imagesArr)
       setLoading(false)
@@ -93,7 +101,7 @@ const Unsplash = () => {
     }
     try {
       const deletedPhoto = await axios.delete(
-        `http://localhost:8080/api/v1/image/${photoID}`
+        `https://unsplash-be.herokuapp.com/api/v1/image/${photoID}`
       )
 
       if (deletedPhoto.data.status === 'success') {
@@ -113,7 +121,7 @@ const Unsplash = () => {
     let searchText = e.target.value.trim().toLowerCase()
     try {
       const photos = await axios.get(
-        `http://localhost:8080/api/v1/image?label=${searchText}`
+        `https://unsplash-be.herokuapp.com/api/v1/image?label=${searchText}`
       )
       setImages(photos.data.data)
       setLoading(false)

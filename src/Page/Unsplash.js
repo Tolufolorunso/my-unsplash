@@ -22,7 +22,6 @@ const Unsplash = () => {
   const [images, setImages] = useState([])
   const [loading, setLoading] = useState(true)
   const [photoID, setPhotoID] = useState('')
-  const [url, setPhotoID] = useState('')
 
   const cancelHandler = () => {
     setLabel('')
